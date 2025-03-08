@@ -11,7 +11,6 @@ node_modules
 src/components/
 src/pages/Cards.jsx
 src/pages/Gallary.jsx
-src/pages/Hero.jsx
 dist
 dist-ssr
 *.local
