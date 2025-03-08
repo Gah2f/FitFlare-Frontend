@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 src/components/
-src/pages/Cards.jsx
 dist
 dist-ssr
 *.local
