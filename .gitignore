@@ -12,7 +12,6 @@ src/components/
 src/pages/Cards.jsx
 src/pages/Gallary.jsx
 src/pages/Hero.jsx
-src/pages/Popular.jsx
 dist
 dist-ssr
 *.local
