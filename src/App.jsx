@@ -5,6 +5,9 @@ import Hero from './pages/Hero'
 import Gallary from './pages/Gallary'
 import Popular from './pages/Popular'
 import PopularTa from './pages/PopularTa'
+import Numberedinfo from './pages/Numberedinfo'
+import Subscribe from './pages/Subscribe'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
         <Gallary/>
         <Popular/>
         <PopularTa/>
+        <Numberedinfo/>
+        <Subscribe/>
+        <Footer/>
     </div>
   )
 }
