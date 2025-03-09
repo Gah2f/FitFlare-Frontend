@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet');
 
 @import "tailwindcss"; 
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 @custom-variant hover (&:hover);
 

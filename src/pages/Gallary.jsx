@@ -4,6 +4,7 @@ import Flexy from "../assets/imgs/Flexy.jpg";
 import Gymman from "../assets/imgs/Gymman.jpg";
 import excerise from "../assets/imgs/Inclass.jpg";
 import Swim from "../assets/imgs/Swim.jpg";
+import CarouselImg from "../components/Carusel/CarouselImg";
 
 function Gallary() {
   return (
@@ -14,32 +15,10 @@ function Gallary() {
         </h1>
       </div>
 
-      <div className="md:grid-cols-2  justify-center items-start gap-4 flex">
-        <div className="mb-4 md:mb-0">
-            <img src={Gymman} alt="Gym man" className="md:h-[750px] w-full mx-auto rounded-sm"/>
-        </div>
-
-        <div className="gap-4 grid-cols-2 items-start">
-          <div className="flex gap-2">
-          <div className="mt-4">
-                <img src={Flexy} alt="Flexy" className="md:h-[350px] rounded-sm" />
-            </div>
-            <div className="mt-4">
-                <img src={Swim} alt="Swim" className="md:h-[350px] rounded-sm" />
-            </div>
-          </div>
-           <div className="flex gap-2">
-           <div className="mt-4">
-                <img src={excerise} alt="Exercise" className="md:h-[350px] rounded-sm" />
-            </div>
-            <div className="mt-4">
-                <img src={Dumpel} alt="Dumpel" className="md:h-[350px] rounded-sm" />
-            </div>
-           </div>
-           
-        </div>
+    
+      <div className="justify-center pl-90">
+      <CarouselImg/>
       </div>
-
     </div>
   );
 }
