@@ -6,7 +6,7 @@ function PopularTa() {
     const [instructors, setInstructor] = useState([]);
     
     useEffect (()=>{
-        axiosFetch.get('/popularinstructors').then((data)=>{
+        axiosFetch.get('/user').then((data)=>{
                 setInstructor(data.data)
             }).catch((err)=> {console.log(err);}) ; 
         } 
@@ -28,22 +28,29 @@ function PopularTa() {
             </div>
      </div>
 
-     <div> 
+     <div > 
         {
             instructors ? 
             <> 
-            <div>
+            <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 p-4 '>
                 {
                     instructors.map((instructor, index)=>(
-                        <div key={index}>
+                        <div  key={index} className='shadow-2xl ' >
+                            <div className='items-center p-2 transition duration-300 hover:-translate-y-2'>
+                                <img className='w-full max-h-[280px]  rounded-md' src={instructor?.photoUrl} alt="" />
+                            </div>
                             <div>
-                                <img src={instructor?.photoUrl} alt="" />
+                                <h1 className='text-md  text-gray-500 mb-2 font-bold'> {instructor?.name}</h1>
+                                <h1 className='text-sm  text-gray-500 mb-2'> {instructor?.address}</h1>
                             </div>
                         </div>
                     ))
                 }
             </div>
-            </> : <></>
+            </> :
+            <> 
+            <p> No instructor avaliable. </p>
+            </>
         }
      </div>
     </div>
