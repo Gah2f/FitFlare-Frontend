@@ -1,26 +1,20 @@
 import React from 'react'
 import Nav from './components/Nav'
 import { Route, Routes } from 'react-router'
-import Hero from './pages/Hero'
-import Gallary from './pages/Gallary'
-import Popular from './pages/Popular'
-import PopularTa from './pages/PopularTa'
-import Numberedinfo from './pages/Numberedinfo'
-import Subscribe from './pages/Subscribe'
 import Footer from './components/Footer'
+import Home from './components/Home'
+import Instructors from './pages/Instructors/Instructors'
+import EachInstructor from './pages/Instructors/EachInstructor'
 
 function App() {
   return (
     <div>
+      <Nav/>
         <Routes>
-            <Route path='/' element={<Nav />} />
+            <Route path='/' element={< Home/>} />
+            <Route path='/instructors' element={<Instructors/>}/>
+            <Route path='/instructors/:id' element={<EachInstructor/>}/>
         </Routes>
-        <Hero/>
-        <Gallary/>
-        <Popular/>
-        <PopularTa/>
-        <Numberedinfo/>
-        <Subscribe/>
         <Footer/>
     </div>
   )
