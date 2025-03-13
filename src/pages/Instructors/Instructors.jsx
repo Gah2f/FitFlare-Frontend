@@ -31,6 +31,7 @@ function Instructors() {
                             <div>
                                 <h1 className='text-md  text-gray-500 mb-2 font-bold'> {instructor?.name}</h1>
                                 <h1 className='text-sm  text-gray-500 mb-2'> {instructor?.address}</h1>
+                                <h1 className='text-sm  text-gray-500 mb-2'> {instructor?.rating}</h1>
                             </div>
                         </div>
                     ))
