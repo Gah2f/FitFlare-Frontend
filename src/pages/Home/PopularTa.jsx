@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useAxiosFetch from '../../hooks/useAxiosFetch';
+import {Link} from 'react-router'
 
 function PopularTa() {
     const axiosFetch = useAxiosFetch();
@@ -7,7 +8,9 @@ function PopularTa() {
     
     useEffect (()=>{
         axiosFetch.get('/user').then((data)=>{
-                setInstructor(data.data)
+            const filteredInstructors = data.data.filter(instructors => instructors.rating === 5);
+                setInstructor(filteredInstructors)
+                // console.log(filteredInstructors);
             }).catch((err)=> {console.log(err);}) ; 
         } 
     ,[])
@@ -32,18 +35,19 @@ function PopularTa() {
         {
             instructors ? 
             <> 
-            <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 p-4 '>
+            <div  className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 p-4 '>
                 {
                     instructors.map((instructor, index)=>(
-                        <div  key={index} className='shadow-2xl ' >
+                        <Link to={`${instructor._id}`}  key={index} className='shadow-2xl ' >
                             <div className='items-center p-2 transition duration-300 hover:-translate-y-2'>
                                 <img className='w-full max-h-[280px]  rounded-md' src={instructor?.photoUrl} alt="" />
                             </div>
                             <div>
                                 <h1 className='text-md  text-gray-500 mb-2 font-bold'> {instructor?.name}</h1>
                                 <h1 className='text-sm  text-gray-500 mb-2'> {instructor?.address}</h1>
+                                <h1 className='text-sm  text-gray-500 mb-2'> {instructor?.rating}</h1>
                             </div>
-                        </div>
+                        </Link>
                     ))
                 }
             </div>
