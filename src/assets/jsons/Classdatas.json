@@ -1,0 +1,361 @@
+[
+    {
+        "name": "Progressive Power Flow",
+        "image": "https://images.unsplash.com/photo-1518609571773-39b7d303a87b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 100,
+        "Skillsgain": [
+            "Flexibility",
+            "Balance",
+            "Core Strength"
+        ],
+        "price": "$50",
+        "Rating": "4.5",
+        "Level": "Beginner",
+        "Duration": "4 Weeks",
+        "Liked": "85%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo0",
+        "description": "A great fitness class focusing on Flexibility, Balance, Core Strength.",
+        "instructorName": "Watson T.",
+        "instructorEmail": "watson@taylor.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 0,
+        "reason": null
+    },
+    {
+        "name": "Strength & Conditioning",
+        "image": "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 102,
+        "Skillsgain": [
+            "Endurance",
+            "Cardiovascular Health",
+            "Fat Burn"
+        ],
+        "price": "$60",
+        "Rating": "4.6",
+        "Level": "Intermediate",
+        "Duration": "6 Weeks",
+        "Liked": "86%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo1",
+        "description": "A great fitness class focusing on Endurance, Cardiovascular Health, Fat Burn.",
+        "instructorName": "Lisa R.",
+        "instructorEmail": "lisa@fitblaze.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 3,
+        "reason": null
+    },
+    {
+        "name": "Cardio Burnout",
+        "image": "https://plus.unsplash.com/premium_photo-1661281288734-49d3606234c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 104,
+        "Skillsgain": [
+            "Muscle Growth",
+            "Strength Training",
+            "Powerlifting"
+        ],
+        "price": "$70",
+        "Rating": "4.7",
+        "Level": "Advanced",
+        "Duration": "8 Weeks",
+        "Liked": "87%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo2",
+        "description": "A great fitness class focusing on Muscle Growth, Strength Training, Powerlifting.",
+        "instructorName": "James K.",
+        "instructorEmail": "james@powertrain.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 6,
+        "reason": null
+    },
+    {
+        "name": "Mindful Yoga",
+        "image": "https://plus.unsplash.com/premium_photo-1664910461298-d47622d62ebd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 106,
+        "Skillsgain": [
+            "Yoga Mastery",
+            "Breathing Techniques",
+            "Mindfulness"
+        ],
+        "price": "$80",
+        "Rating": "4.8",
+        "Level": "Beginner",
+        "Duration": "12 Weeks",
+        "Liked": "88%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo3",
+        "description": "A great fitness class focusing on Yoga Mastery, Breathing Techniques, Mindfulness.",
+        "instructorName": "Sophia B.",
+        "instructorEmail": "sophia@yogaflow.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 9,
+        "reason": null
+    },
+    {
+        "name": "Power HIIT",
+        "image": "https://plus.unsplash.com/premium_photo-1663036931581-e4bcf1560c10?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 108,
+        "Skillsgain": [
+            "HIIT",
+            "Explosive Power",
+            "Speed"
+        ],
+        "price": "$90",
+        "Rating": "4.9",
+        "Level": "Intermediate",
+        "Duration": "4 Weeks",
+        "Liked": "89%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo4",
+        "description": "A great fitness class focusing on HIIT, Explosive Power, Speed.",
+        "instructorName": "Michael C.",
+        "instructorEmail": "michael@strengthmax.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 12,
+        "reason": null
+    },
+    {
+        "name": "Muscle Max",
+        "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 110,
+        "Skillsgain": [
+            "Flexibility",
+            "Balance",
+            "Core Strength"
+        ],
+        "price": "$50",
+        "Rating": "4.5",
+        "Level": "Advanced",
+        "Duration": "6 Weeks",
+        "Liked": "90%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo5",
+        "description": "A great fitness class focusing on Flexibility, Balance, Core Strength.",
+        "instructorName": "Watson T.",
+        "instructorEmail": "watson@taylor.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 15,
+        "reason": null
+    },
+    {
+        "name": "Endurance Boost",
+        "image": "https://images.unsplash.com/photo-1630415187908-39d6d209b15c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 112,
+        "Skillsgain": [
+            "Endurance",
+            "Cardiovascular Health",
+            "Fat Burn"
+        ],
+        "price": "$60",
+        "Rating": "4.6",
+        "Level": "Beginner",
+        "Duration": "8 Weeks",
+        "Liked": "91%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo6",
+        "description": "A great fitness class focusing on Endurance, Cardiovascular Health, Fat Burn.",
+        "instructorName": "Lisa R.",
+        "instructorEmail": "lisa@fitblaze.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 18,
+        "reason": null
+    },
+    {
+        "name": "Zen Flow Yoga",
+        "image": "https://images.unsplash.com/photo-1626444232874-e72c020eeb0e?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 114,
+        "Skillsgain": [
+            "Muscle Growth",
+            "Strength Training",
+            "Powerlifting"
+        ],
+        "price": "$70",
+        "Rating": "4.7",
+        "Level": "Intermediate",
+        "Duration": "12 Weeks",
+        "Liked": "92%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo7",
+        "description": "A great fitness class focusing on Muscle Growth, Strength Training, Powerlifting.",
+        "instructorName": "James K.",
+        "instructorEmail": "james@powertrain.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 21,
+        "reason": null
+    },
+    {
+        "name": "Athletic Agility",
+        "image": "https://plus.unsplash.com/premium_photo-1663126246796-999a49ec8736?q=80&w=1477&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "availableSeats": 116,
+        "Skillsgain": [
+            "Yoga Mastery",
+            "Breathing Techniques",
+            "Mindfulness"
+        ],
+        "price": "$80",
+        "Rating": "4.8",
+        "Level": "Advanced",
+        "Duration": "4 Weeks",
+        "Liked": "93%",
+        "Testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://i.ibb.co/album1.jpg",
+                "feedback": "This class transformed my fitness journey!"
+            },
+            {
+                "name": "Jake R.",
+                "image": "https://i.ibb.co/album2.jpg",
+                "feedback": "The best workout sessions I've attended!"
+            },
+            {
+                "name": "Emily K.",
+                "image": "https://i.ibb.co/album3.jpg",
+                "feedback": "Highly recommended for all fitness levels!"
+            }
+        ],
+        "videoLink": "https://youtu.be/samplevideo8",
+        "description": "A great fitness class focusing on Yoga Mastery, Breathing Techniques, Mindfulness.",
+        "instructorName": "Sophia B.",
+        "instructorEmail": "sophia@yogaflow.com",
+        "status": "approved",
+        "submitted": "2025-03-16T12:00:00.000Z",
+        "totalEnrolled": 24,
+        "reason": null
+    }]
