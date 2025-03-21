@@ -36,7 +36,7 @@ function PopularTa() {
             instructors ? 
             <> 
             <div  className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 p-4 '>
-                {
+                { 
                     instructors.map((instructor, index)=>(
                         <Link to={`${instructor._id}`}  key={index} className='shadow-2xl ' >
                             <div className='items-center p-2 transition duration-300 hover:-translate-y-2'>
