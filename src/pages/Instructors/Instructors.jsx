@@ -15,7 +15,7 @@ function Instructors() {
     },[])
     // console.log(AllInstructors);
   return (
-    <div className='pt-20 pb-72'>
+    <div className='paddingcontroller'>
         <div>
             <div>
                 <h1 className='text-5xl font-bold text-center'>Here is the list of our <span className='text-5xl text-blue-600'>exceptional instructors </span> </h1>
