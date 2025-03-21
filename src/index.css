@@ -8,3 +8,8 @@
 body {
     font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
 }
+@layer {
+    .paddingcontroller {
+        @apply pt-32 pb-72 ml-6;
+    }
+}
