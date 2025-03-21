@@ -35,7 +35,7 @@ function EachClass() {
               </div>
               </div>
 
-              <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-gray-300  rounded-xl shadow-2xl mt-8 mr-8 h-50'>
+              <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-x divide-gray-300  rounded-2xl shadow-2xl  mt-8 mr-8 h-30'>
                 <div className='px-6 py-4 border-r border-gray-300 text-center'>
                   <span className='text-xl font-bold'>{detail?.availableSeats} </span>
                  <p className='text-sm text-gray-600 mt-4'>
