@@ -8,12 +8,12 @@ function Popular() {
   const [classes, setClasses] = useState([]);
 
   useEffect (()=>{
-    const fetchClasses = async ()=>{
-      const response = await axiosFetch.get('/classes');
-      // console.log(response.data);
-      setClasses(response.data);
-    }
-    fetchClasses();
+    axiosFetch.get('/classes').then((data)=> {
+      // console.log(data.data);
+      const filteredData = data.data.filter((filterData)=> filterData.Rating === '5.0');
+      // console.log(filteredData);
+      setClasses(filteredData)
+    })
   },[axiosFetch])
   // console.log(classes);
   return (
