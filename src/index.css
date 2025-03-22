@@ -10,6 +10,6 @@ body {
 }
 @layer {
     .paddingcontroller {
-        @apply pt-32 pb-72 ml-6;
+        @apply pt-32 pb-72 ml-6 mr-6;
     }
 }
