@@ -8,11 +8,12 @@ import EachInstructor from './pages/Instructors/EachInstructor'
 import Classes from './pages/Classes/Classes'
 import EachClass from './pages/Classes/EachClass'
 import Subsribe from './pages/Home/Subscribe';
-
+import ScrollToTop from './hooks/TopNavigator'
 
 function App() {
   return (
     <div>
+      <ScrollToTop/>
       <Nav/>
         <Routes>
             <Route path='/' element={< Home/>} />
