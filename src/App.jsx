@@ -7,6 +7,8 @@ import Instructors from './pages/Instructors/Instructors'
 import EachInstructor from './pages/Instructors/EachInstructor'
 import Classes from './pages/Classes/Classes'
 import EachClass from './pages/Classes/EachClass'
+import Subsribe from './pages/Home/Subscribe';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <Route path='/classes' element={<Classes/>}/>
             <Route path='/classes/:id' element={<EachClass/>}/>
         </Routes>
+        <Subsribe/>
         <Footer/>
     </div>
   )
