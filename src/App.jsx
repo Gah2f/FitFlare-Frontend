@@ -9,6 +9,8 @@ import Classes from './pages/Classes/Classes'
 import EachClass from './pages/Classes/EachClass'
 import Subsribe from './pages/Home/Subscribe';
 import ScrollToTop from './hooks/TopNavigator'
+import Login from './pages/Log/Login'
+import SignUp from './pages/Log/SignUp'
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
             <Route path='/instructors/:id' element={<EachInstructor/>}/>
             <Route path='/classes' element={<Classes/>}/>
             <Route path='/classes/:id' element={<EachClass/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/signup' element={<SignUp/>}/>
+          
         </Routes>
         <Subsribe/>
         <Footer/>
