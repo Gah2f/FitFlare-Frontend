@@ -6,7 +6,7 @@ function Gallary() {
     <div className=" ">
       <div className="mb-16 md:w-[80%] mx-auto my-28 ">
         <h1 className="text-5xl font-bold text-center  text-black mb-8">
-          Our Gallary
+          Our <span className="text-blue-500"> Gallary</span>
         </h1>
       </div>
 
