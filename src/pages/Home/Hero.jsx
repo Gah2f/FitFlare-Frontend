@@ -6,7 +6,7 @@ function Hero() {
      <div className=' absolute inset-0 bg-black/50  flex justify-center  text-center font-mono items-center px-4 '>
      <div>
         <h1 className=' text-3xl text-white' >
-          We provides <br /> 
+          We provide <br /> 
           <span className='text-5xl text-white  font-bold'> Best Fitness Platform </span> 
         </h1>
 
