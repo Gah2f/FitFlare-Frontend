@@ -3,6 +3,7 @@ import useAxiosFetch from '../../hooks/useAxiosFetch'
 import { useNavigate } from 'react-router';
 import SearchIcon from '@mui/icons-material/Search';
 
+
 function Classes() {
     const axiosFetch = useAxiosFetch();
     const [Classes, SetClasses] = useState([]);
@@ -17,6 +18,8 @@ function Classes() {
     },[])
 
     const filteredSearch = Classes.filter((eachclass)=> eachclass.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
+  
   return (
     <div className='pt-20 pb-72 ml-4 mr-4'>
         <div >
