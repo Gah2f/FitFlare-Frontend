@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from "react";
 import useAxiosFetch from "../../hooks/useAxiosFetch";
 import { useParams } from "react-router";
-import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+// import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import useUser from '../../hooks/useUser';
+import useAxioSecure from '../../hooks/useAxioSecure';
 
 function EachClass() {
   const axiosFetch = useAxiosFetch();
   const [DispayEach, setDisplayEach] = useState([]);
+  const {currentUser} = useUser();
+  const role = currentUser?.role;
+  const [enrolledClasses, setEnrolledClasses] = useState([]);
   const { id } = useParams();
   // console.log(classID);
-
+    const axioSecure = useAxioSecure();
+    const handleSelect = (id)=>{
+      // console.log(id);
+      axioSecure.get(`/enrolledclasses/${currentUser?.email}`).then(
+        res => setEnrolledClasses(res.data) 
+      ).catch(err=>console.log(err))
+    }
   useEffect(() => {
     if (id) {
       axiosFetch
@@ -22,7 +33,6 @@ function EachClass() {
   // console.log(DispayEach);
   return (
     <div className="paddingcontroller ">
-      
       <div>
         {DispayEach.map((detail, index) => (
           <div key={index}>
@@ -32,7 +42,8 @@ function EachClass() {
                 <h3 className="text-lg ">
                   Instructor: {detail?.instructorName}
                 </h3>
-                <button className="mt-6 text-xl text-white p-4 bg-blue-500 hover:bg-blue-600 rounded-sm">
+                <button onClick={()=>handleSelect(detail._id)} title={role === 'admin' || role === 'instructor' ? 'Instructors and Admins can not enroll the course' ? detail.availableSeats < 1 : 'The available seats are full, check out next time' : 'Added to your Courses!'} 
+                disabled={role === 'admin' || role==='insructor' || detail.availableSeats < 1} className="mt-6 text-xl text-white p-4 bg-blue-500 hover:bg-blue-600 rounded-sm cursor-pointer">
                   Enroll now
                 </button>
                 <p className="text-3xl mt-8 ">
