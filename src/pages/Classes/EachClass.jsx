@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 // import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import useUser from '../../hooks/useUser';
 import useAxioSecure from '../../hooks/useAxioSecure';
+import { ToastContainer, toast } from 'react-toastify';
 
 function EachClass() {
   const axiosFetch = useAxiosFetch();
@@ -19,6 +20,36 @@ function EachClass() {
       axioSecure.get(`/enrolledclasses/${currentUser?.email}`).then(
         res => setEnrolledClasses(res.data) 
       ).catch(err=>console.log(err))
+
+      if(!currentUser){
+        return toast.error('Please login to enroll the class')
+      }
+      axioSecure.get(`/cartcollections/${id}?email=${currentUser?.email}`).then(
+        res => {
+          if(res.data._id === id){
+            return toast.error('Already enrolled in this class')
+          } else if (enrolledClasses.find(item => item.classes._id === id)) {
+            return toast.error('Already enrolled in this class')
+          } else {
+            const data = {
+              classID : id,
+              userMail : currentUser?.email,
+              data: new Date(),
+            }
+            toast.promise(axioSecure.post(`/addtocart`, data)).then(
+              res => {console.log(res.data)} 
+            ), {
+              pending: 'Enrolling in the class...',
+              success: {
+                render ({data}) {
+                  return `Enrolled in ${data.classID} successfully!`;
+                }
+              },
+              error: 'Error enrolling in the class. Please try again.'
+            }
+          }
+        }
+      )
     }
   useEffect(() => {
     if (id) {
