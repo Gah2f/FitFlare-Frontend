@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { app } from '../../config/firebaseInit';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, signInWithPopup ,onAuthStateChanged } from "firebase/auth";
+import axios from 'axios'; 
 
 export const AuthContext = React.createContext();
 function AuthProvider({children}) {
@@ -30,7 +31,7 @@ function AuthProvider({children}) {
     const logout = async ()=>{
       try {
         setLoading(true);
-        return await auth.signOut()
+        return await auth.signOut(auth)
       } catch (err) {
         setError(err.message);
       }
@@ -39,7 +40,7 @@ function AuthProvider({children}) {
     const updateUser = async (name,photo)=> {
       try {
         setLoading(true);
-         await auth.currentUser.updateProfile({displayName: name, photoURl: photo}) 
+         await auth.currentUser.updateProfile({displayName: name, photoURL: photo}) 
         setUser(auth.currentUser);
     } catch (err) {
         setError(err.message);
@@ -50,7 +51,8 @@ function AuthProvider({children}) {
     const googleSignIn = async ()=>{
       try {
         setLoading(true);
-        return await signInWithPopup(auth, googleProvider)
+        const userCredential = await signInWithPopup(auth, googleProvider);
+       setUser(userCredential.user);
       } catch (err) {
         setError(err.message);
       }
@@ -74,7 +76,7 @@ function AuthProvider({children}) {
       })
       return () => unsubscribe();
     },[])
-    const contextValue = {user, signUp , loginUser , logout, updateUser, error, setError }
+    const contextValue = {user, signUp , loginUser , logout, updateUser, googleSignIn, error, setError }
   return (
     <div>
        <AuthContext.Provider value={contextValue}>
