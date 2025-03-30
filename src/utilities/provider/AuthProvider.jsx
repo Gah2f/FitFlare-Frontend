@@ -53,8 +53,10 @@ function AuthProvider({children}) {
         setLoading(true);
         const userCredential = await signInWithPopup(auth, googleProvider);
        setUser(userCredential.user);
+       return userCredential;
       } catch (err) {
         setError(err.message);
+        throw err;
       }
     }
 
