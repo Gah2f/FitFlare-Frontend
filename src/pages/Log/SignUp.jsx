@@ -34,31 +34,31 @@ function SignUp() {
     });
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setProfileImage(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setPreviewImage(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  // const handleImageChange = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     setProfileImage(file);
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       setPreviewImage(reader.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
-  const uploadImage = async (file) => {
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", "fitflare-avatar");
+  // const uploadImage = async (file) => {
+  //   const formData = new FormData();
+  //   formData.append("file", file);
+  //   formData.append("upload_preset", "fitflare-avatar");
 
-    try {
-      const response = await axios.post("fitflare-avatar", formData);
-      return response.data.secure_url;
-    } catch (error) {
-      console.log("Error uploading image", error);
-      return null;
-    }
-  };
+  //   try {
+  //     const response = await axios.post("https://api.cloudinary.com/v1_1/duq9gdai4/image/upload", formData);
+  //     return response.data.secure_url;
+  //   } catch (error) {
+  //     console.log("Error uploading image", error);
+  //     return null;
+  //   }
+  // };
 
   const onSubmit = async (data) => {
     try {
@@ -70,14 +70,14 @@ function SignUp() {
         setError("You must agree to the terms and conditions");
         return;
       }
-      let imageUrl = "";
-      if (profileImage) {
-        imageUrl = await uploadImage(profileImage);
-        if (!imageUrl) {
-          setError("Failed to upload profile image");
-          return;
-        }
-      }
+      // let imageUrl = "";
+      // if (profileImage) {
+      //   imageUrl = await uploadImage(profileImage);
+      //   if (!imageUrl) {
+      //     setError("Failed to upload profile image");
+      //     return;
+      //   }
+      // }
       setError("");
       const userCredential = await signUp(data.email, data.password);
       const user = userCredential.user;
@@ -178,8 +178,16 @@ function SignUp() {
               </select>
          
               <div className="space-y-2">
-               
-                <div className="flex items-center gap-4 p-2">
+              <input
+                type="text"
+                name="photo"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                placeholder="Enter your Profile photoURL"
+                value={formData.photo}
+                onChange={handleChange}
+                required
+              />
+                {/* <div className="flex items-center gap-4 p-2">
                   <input
                     type="file"
                     ref={fileInputRef}
@@ -202,7 +210,7 @@ function SignUp() {
                     />
                   )}
                 </div>
-                
+                 */}
               </div>
 
               <div className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none space-x-15 flex">

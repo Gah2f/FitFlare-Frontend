@@ -51,6 +51,30 @@ function EachClass() {
         }
       )
     }
+
+    const handleEnrollNow = async (classId, classPrice) => {
+      if(!currentUser) {
+        return toast.error('Please login to enroll the class.');
+      }
+
+      if(enrolledClasses.some(item => item.classes._id === classId)) {
+        return toast.error('Already enrolled!')
+      }
+
+      try {
+        const response = await axioSecure.post('/createcheckoutsession', {
+          classId,
+          userEmail: currentUser.email,
+          price: classPrice,
+          returnUrl: `${window.location.origin}/payment-success`
+        })
+
+        window.location.href = response.data.url;
+      } catch (error) {
+        toast.error('Failed to initiate payment. TRY AGAIN!');
+        console.log('Payment error:', error);
+      }
+    }
   useEffect(() => {
     if (id) {
       axiosFetch
@@ -62,6 +86,8 @@ function EachClass() {
     }
   }, [id]);
   // console.log(DispayEach);
+
+   
   return (
     <div className="paddingcontroller ">
       <div>
@@ -73,7 +99,8 @@ function EachClass() {
                 <h3 className="text-lg ">
                   Instructor: {detail?.instructorName}
                 </h3>
-                <button onClick={()=>handleSelect(detail._id)} title={role === 'admin' || role === 'instructor' ? 'Instructors and Admins can not enroll the course' ? detail.availableSeats < 1 : 'The available seats are full, check out next time' : 'Added to your Courses!'} 
+                <button onClick={()=>handleEnrollNow(detail._id, detail.price)}
+                 title={role === 'admin' || role === 'instructor' ? 'Instructors and Admins can not enroll the course' ? detail.availableSeats < 1 : 'The available seats are full, check out next time' : 'Added to your Courses!'} 
                 disabled={role === 'admin' || role==='insructor' || detail.availableSeats < 1} className="mt-6 text-xl text-white p-4 bg-blue-500 hover:bg-blue-600 rounded-sm cursor-pointer">
                   Enroll now
                 </button>
