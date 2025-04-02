@@ -11,6 +11,7 @@ import Subsribe from './pages/Home/Subscribe';
 import ScrollToTop from './hooks/TopNavigator'
 import Login from './pages/Log/Login'
 import SignUp from './pages/Log/SignUp'
+import PaymentSuccess from './pages/Payments/PaymentSuccess'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/classes/:id' element={<EachClass/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
+            <Route path='/paymentsuccess' element={<PaymentSuccess/>}/>
           
         </Routes>
         <Subsribe/>
